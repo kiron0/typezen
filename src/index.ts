@@ -1,3 +1,2 @@
-export * from "./check-types";
-export * from "./file-types";
+export * from "./functions";
 export * from "./types";

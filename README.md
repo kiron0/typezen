@@ -12,7 +12,7 @@
 
 ## 🌟 Features
 
-- **50+ Type Guards** - Comprehensive type checking functions
+- **100+ Type Guards** - Comprehensive type checking functions
 - **Zero Dependencies** - Lightweight and pure TypeScript
 - **Runtime Validation** - Works in both Node.js and browsers
 - **Magic Number Detection** - Real file type validation
@@ -63,7 +63,7 @@ import {
 isNumber(42);            // true
 isFloat(3.14);           // true
 isString('Zen');         // true
-isSymbol(Symbol());      // true
+isPositive(6);           // true
 ```
 
 ### 🧰 Object Checks
@@ -88,8 +88,8 @@ import {
 // File extension check
 isPNG('image.png');      // true
 
-// Magic number validation
-await isRealPNG('image.png');  // true (checks file contents)
+// Image file check
+await isImageFile(File);  // true (checks file contents)
 
 // URL validation
 isURL('https://typezen.dev/guide');  // true
