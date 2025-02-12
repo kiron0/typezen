@@ -1,6 +1,7 @@
 /src
 /node_modules
-bun.lock
+package-lock.json
+.github
 
 .env
 .DS_Store
