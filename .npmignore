@@ -9,3 +9,4 @@ package-lock.json
 
 tsconfig.json
 tsup.config.ts
+rollup.config.js
