@@ -149,10 +149,10 @@ function isValidUsername(input: unknown): boolean {
 git clone https://github.com/kiron0/typezen.git
 
 # Install dependencies
-npm install
+bun install
 
 # Build project
-npm run build
+bun run build
 ```
 
 ---
