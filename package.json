@@ -1,7 +1,7 @@
 {
   "name": "typezen",
   "description": "A collection of TypeScript utilities",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -20,7 +20,23 @@
     "lint": "tsc"
   },
   "devDependencies": {
+    "@types/node": "^22.13.4",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
-  }
+  },
+"keywords": [
+  "typescript",
+  "utilities",
+  "typezen",
+  "typescript-utilities",
+  "safe",
+  "checking",
+  "inference",
+  "system",
+  "safety",
+  "utils",
+  "helpers",
+  "definitions",
+  "library"
+ ]
 }

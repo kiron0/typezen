@@ -78,8 +78,8 @@ export const isAsyncFunction = (value: unknown): boolean =>
 export const isPrimitive = (value: unknown): boolean =>
   value === null || (typeof value !== "object" && typeof value !== "function");
 
-// Check if the value is a hexadecimal color: Example: isHex("#fff") => true
-export const isHex = (value: string): boolean =>
+// Check if the value is a hexadecimal color: Example: isHexColor("#fff") => true
+export const isHexColor = (value: string): boolean =>
   /^#([A-Fa-f0-9]{3,4}){1,2}$/.test(value);
 
 // Check if the value is an email: Example: isEmail("hello@example.com") => true
@@ -149,3 +149,19 @@ export const isIPAddress = (value: string): boolean =>
 
 // Check if the value is a date: Example: isDate("2021-10-10") => true
 export const isDate = (value: string): boolean => !isNaN(Date.parse(value));
+
+// Check if the value is deep equal: Example: isDeepEqual({ a: 1 }, { a: 1 }) => true
+export const isDeepEqual = (a: any, b: any): boolean => {
+  if (a === b) return true;
+  if (
+    typeof a !== "object" ||
+    typeof b !== "object" ||
+    a === null ||
+    b === null
+  )
+    return false;
+  const keysA = Object.keys(a),
+    keysB = Object.keys(b);
+  if (keysA.length !== keysB.length) return false;
+  return keysA.every((key) => isDeepEqual(a[key], b[key]));
+};

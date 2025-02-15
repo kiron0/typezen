@@ -15,7 +15,7 @@
 - **100+ Type Guards** - Comprehensive type checking functions
 - **Zero Dependencies** - Lightweight and pure TypeScript
 - **Runtime Validation** - Works in both Node.js and browsers
-- **Magic Number Detection** - Real file type validation
+- **Image File Validation** - Image file type validation
 - **TypeScript First** - Full type inference support
 
 ---
@@ -26,6 +26,8 @@
 npm install typezen
 # or
 yarn add typezen
+# or
+bun add typezen
 ```
 
 ---
@@ -33,7 +35,7 @@ yarn add typezen
 ## 🚀 Quick Start
 
 ```typescript
-import { isEmail, isURL, isRealPNG } from 'typezen';
+import { isEmail, isURL, isImageFile } from 'typezen';
 
 // Validate email
 if (isEmail('user@example.com')) {
@@ -45,8 +47,8 @@ if (isURL('https://typezen.dev')) {
   console.log('Valid URL! 🌐');
 }
 
-// Real PNG validation (magic numbers)
-const isPNG = await isRealPNG('image.png');
+// Image file validation
+const isImage = await isImageFile(file);
 ```
 
 ---

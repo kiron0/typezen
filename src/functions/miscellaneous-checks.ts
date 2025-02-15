@@ -118,3 +118,8 @@ export const isTomorrow = (value: Date): boolean => {
   tomorrow.setDate(tomorrow.getDate() + 1);
   return value.toDateString() === tomorrow.toDateString();
 };
+
+// Check if the value is a valid regular expression: Example: isValidRegExp(/test/g) => true
+export const isValidRegExp = (regex: unknown): boolean => {
+  return regex instanceof RegExp;
+};
