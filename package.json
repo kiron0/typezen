@@ -1,7 +1,7 @@
 {
   "name": "typezen",
-  "description": "A collection of TypeScript utilities",
-  "version": "0.0.7",
+  "description": "A collection of TypeScript utilities for safe type checking and inference.",
+  "version": "0.0.8",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
