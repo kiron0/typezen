@@ -7,15 +7,6 @@ const isFileType = (filePath: string, format: string): boolean => {
   return ext === format.toLowerCase();
 };
 
-async function readFile(input: string | File) {
-  if (typeof window === "undefined") {
-    const { readFileSync } = await import("fs");
-    return readFileSync(input as string, "utf8");
-  } else {
-    return (input as File).text();
-  }
-}
-
 // Check if the file is an image: Example: isImageFile(new File([""], "image.png")) => true
 export const isImageFile = (file: File): boolean => {
   if (!file) throw new Error("File is required");
@@ -181,15 +172,3 @@ export const isMp3 = (filePath: string): boolean => isFileType(filePath, "mp3");
 
 // Check if the file is an MP4: Example: isMp4("file.mp4") => true
 export const isMp4 = (filePath: string): boolean => isFileType(filePath, "mp4");
-
-// Check if the file is a PNG: Example: isPNGFile(new File([""], "image.png")) => true
-export const isPNGFile = async (file: File): Promise<boolean> => {
-  const content = await readFile(file);
-  return isPNG(content);
-};
-
-// Check if the file is a JPEG: Example: isJPEGFile(new File([""], "image.jpeg")) => true
-export const isJPEGFile = async (file: File): Promise<boolean> => {
-  const content = await readFile(file);
-  return isJPEG(content);
-};

@@ -10,3 +10,5 @@ bun.lock
 
 tsconfig.json
 tsup.config.ts
+
+.vscode

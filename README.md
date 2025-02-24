@@ -35,7 +35,7 @@ bun add typezen
 ## 🚀 Quick Start
 
 ```typescript
-import { isEmail, isURL, isImageFile } from 'typezen';
+import { isEmail, isURL } from 'typezen';
 
 // Validate email
 if (isEmail('user@example.com')) {
@@ -46,9 +46,6 @@ if (isEmail('user@example.com')) {
 if (isURL('https://typezen.dev')) {
   console.log('Valid URL! 🌐');
 }
-
-// Image file validation
-const isImage = await isImageFile(file);
 ```
 
 ---
